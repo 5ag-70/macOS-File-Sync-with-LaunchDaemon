@@ -1,0 +1,20 @@
+Filtering the log data using "composedMessage CONTAINS "com.user.zprofile_ssh_sync""
+Timestamp                       Thread     Type        Activity             PID    TTL
+2024-12-04 10:31:27.680598+0000 0x8088     Default     0x0                  1977   0    xpcproxy: Launch constraint set on 00000000-0000-0000-0000-000000000000 /Users/sagarrana/Library/LaunchAgents/com.user.zprofile_ssh_sync.plist
+2024-12-04 10:31:27.683632+0000 0x7f96     Default     0x0                  1      0    launchd: [gui/501 [100015]:] service inactive: com.user.zprofile_ssh_sync
+2024-12-04 10:31:27.697862+0000 0x7f96     Default     0x0                  1      0    launchd: [system:] service inactive: com.user.zprofile_ssh_sync
+2024-12-04 10:31:44.112607+0000 0x82d4     Default     0x0                  1979   0    xpcproxy: Launch constraint set on 00000000-0000-0000-0000-000000000000 /Users/sagarrana/Library/LaunchAgents/com.user.zprofile_ssh_sync.plist
+2024-12-04 10:31:44.115349+0000 0x7f96     Default     0x0                  1      0    launchd: [gui/501 [100015]:] service inactive: com.user.zprofile_ssh_sync
+2024-12-04 10:31:44.319450+0000 0x7bf5     Default     0x0                  1      0    launchd: [system:] service inactive: com.user.zprofile_ssh_sync
+2024-12-04 10:31:54.706155+0000 0x841d     Default     0x0                  1994   0    xpcproxy: Launch constraint set on 00000000-0000-0000-0000-000000000000 /Users/sagarrana/Library/LaunchAgents/com.user.zprofile_ssh_sync.plist
+2024-12-04 10:31:54.708616+0000 0x8069     Default     0x0                  1      0    launchd: [gui/501 [100015]:] service inactive: com.user.zprofile_ssh_sync
+2024-12-04 10:31:54.934720+0000 0x7f96     Default     0x0                  1      0    launchd: [system:] service inactive: com.user.zprofile_ssh_sync
+2024-12-04 10:32:30.273581+0000 0x7f96     Default     0x0                  1      0    launchd: [system:] removing service: com.user.zprofile_ssh_sync
+2024-12-04 10:33:30.739474+0000 0x88ea     Error       0x0                  1      0    launchd: [system/com.user.zprofile_ssh_sync:] Caller specified a plist with bad ownership/permissions: path = /Users/sagarrana/Library/LaunchAgents/com.user.zprofile_ssh_sync.plist, caller = launchctl[2020]
+2024-12-04 10:35:47.597394+0000 0x9874     Default     0x0                  1      0    launchd: [gui/501 [100015]:] removing service: com.user.zprofile_ssh_sync
+2024-12-04 10:35:53.421910+0000 0x987f     Default     0x0                  1      0    launchd: [gui/501 [100015]:] service inactive: com.user.zprofile_ssh_sync
+2024-12-04 10:36:04.006988+0000 0x99cb     Default     0x0                  1      0    launchd: [gui/501 [100015]:] service inactive: com.user.zprofile_ssh_sync
+2024-12-04 10:36:14.035102+0000 0x9874     Default     0x0                  1      0    launchd: [gui/501 [100015]:] service inactive: com.user.zprofile_ssh_sync
+--------------------------------------------------------------------------------------------------------------------
+Log      - Default:         14, Info:                0, Debug:             0, Error:          1, Fault:          0
+Activity - Create:           0, Transition:          0, Actions:

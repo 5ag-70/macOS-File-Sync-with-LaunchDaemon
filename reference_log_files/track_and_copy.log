@@ -1,0 +1,90 @@
+Tue  3 Dec 2024 17:15:20 GMT: Script started
+Tue  3 Dec 2024 17:15:20 GMT: .zprofile not found
+Tue  3 Dec 2024 17:15:20 GMT: .ssh directory not found
+Tue  3 Dec 2024 17:15:59 GMT: Script started
+Tue  3 Dec 2024 17:15:59 GMT: .zprofile not found
+Tue  3 Dec 2024 17:15:59 GMT: .ssh directory not found
+Tue  3 Dec 2024 17:19:38 GMT: Script started
+Tue  3 Dec 2024 17:19:38 GMT: Synced .zprofile
+Tue  3 Dec 2024 17:19:38 GMT: Synced .ssh
+Tue  3 Dec 2024 17:22:49 GMT: Script started
+Tue  3 Dec 2024 17:22:49 GMT: Synced .zprofile
+Tue  3 Dec 2024 17:22:49 GMT: Synced .ssh
+Tue  3 Dec 2024 17:35:49 GMT: Script started
+Tue  3 Dec 2024 17:35:49 GMT: Synced .zprofile
+Tue  3 Dec 2024 17:35:49 GMT: Synced .ssh
+Tue  3 Dec 2024 23:29:58 GMT: Script started
+building file list ... done
+.zprofile
+
+sent 1754 bytes  received 42 bytes  3592.00 bytes/sec
+total size is 1624  speedup is 0.90
+Tue  3 Dec 2024 23:29:58 GMT: Synced .zprofile
+building file list ... done
+./
+id_rsa
+id_rsa.pub
+root
+root.pub
+ubuntutest1
+ubuntutest1.pub
+
+sent 6536 bytes  received 158 bytes  13388.00 bytes/sec
+total size is 128237  speedup is 19.16
+Tue  3 Dec 2024 23:29:58 GMT: Synced .ssh
+Wed  4 Dec 2024 09:47:41 GMT: Script started
+building file list ... done
+.zprofile
+
+sent 3902 bytes  received 42 bytes  7888.00 bytes/sec
+total size is 3772  speedup is 0.96
+Wed  4 Dec 2024 09:47:41 GMT: Synced .zprofile
+building file list ... done
+deleting ubuntutest1.pub
+deleting ubuntutest1
+deleting root.pub
+deleting root
+deleting id_rsa.pub
+deleting id_rsa
+./
+
+sent 251 bytes  received 26 bytes  554.00 bytes/sec
+total size is 220137  speedup is 794.72
+Wed  4 Dec 2024 09:47:41 GMT: Synced .ssh
+Wed Dec  4 10:23:31 GMT 2024: Script started
+Wed Dec  4 10:23:31 GMT 2024: Synced .zprofile
+Wed Dec  4 10:23:32 GMT 2024: Synced .ssh
+Wed Dec  4 10:27:14 GMT 2024: Script started
+Wed Dec  4 10:27:14 GMT 2024: Synced .zprofile
+Wed Dec  4 10:27:14 GMT 2024: Synced .ssh
+Wed Dec  4 10:28:57 GMT 2024: Script started
+Wed Dec  4 10:28:57 GMT 2024: Synced .zprofile
+Wed Dec  4 10:28:57 GMT 2024: Synced .ssh
+Wed Dec  4 10:31:44 GMT 2024: Script started
+Wed Dec  4 10:31:44 GMT 2024: Synced .zprofile
+Wed Dec  4 10:31:44 GMT 2024: Synced .ssh
+Wed Dec  4 10:31:54 GMT 2024: Script started
+Wed Dec  4 10:31:54 GMT 2024: Synced .zprofile
+Wed Dec  4 10:31:54 GMT 2024: Synced .ssh
+Wed Dec  4 10:38:09 GMT 2024: Script started
+Wed Dec  4 10:38:09 GMT 2024: Synced .zprofile
+Wed Dec  4 10:38:09 GMT 2024: Synced .ssh
+Wed Dec  4 10:38:21 GMT 2024: Script started
+Wed Dec  4 10:38:21 GMT 2024: Synced .zprofile
+Wed Dec  4 10:38:21 GMT 2024: Synced .ssh
+Wed Dec  4 10:38:31 GMT 2024: Script started
+Wed Dec  4 10:38:31 GMT 2024: Synced .zprofile
+Wed Dec  4 10:38:31 GMT 2024: Synced .ssh
+Wed Dec  4 10:39:18 GMT 2024: Script started
+Wed Dec  4 10:39:18 GMT 2024: Synced .zprofile
+Wed Dec  4 10:39:18 GMT 2024: Synced .ssh
+Wed Dec  4 10:39:36 GMT 2024: Script started
+Wed Dec  4 10:39:36 GMT 2024: Synced .zprofile
+Wed Dec  4 10:39:36 GMT 2024: Synced .ssh
+Wed Dec  4 11:09:48 GMT 2024: Script started
+Wed Dec  4 11:09:48 GMT 2024: Synced .zprofile
+Wed Dec  4 11:09:48 GMT 2024: Synced .ssh
+Wed Dec  4 11:09:59 GMT 2024: Script started
+Wed Dec  4 11:09:59 GMT 2024: Synced .zprofile
+Wed Dec  4 11:09:59 GMT 2024: Synced .ssh
+
