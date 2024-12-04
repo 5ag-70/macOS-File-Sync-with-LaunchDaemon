@@ -26,6 +26,13 @@ This project provides an automated solution to monitor and synchronize specific 
 git clone <repository_url>
 cd <repository_name>
 ```
+
+### 1a. Move files to appropriate locations
+```bash
+cp com.user.zprofile_ssh_sync.plist /Library/LaunchDaemons/com.user.zprofile_ssh_sync.plist
+cp .track_and_copy.sh /path/where/you/want/to/keep
+```
+
 ### 2. Setup the LaunchDaemon Plist
 ```bash
 <?xml version="1.0" encoding="UTF-8"?>
@@ -113,6 +120,7 @@ tail -f /path/to/log/file.log
 1.	Plist File Location: Must be created in /Library/LaunchDaemons for system-wide use.
 2.	Full Disk Access: Essential for bash to access and modify files.
 3.	Script Placement: The script can be placed anywhere on the system.
+4.  To show/access hidden/dot files press ⌘+⇧+. (command+shift+.)
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request
