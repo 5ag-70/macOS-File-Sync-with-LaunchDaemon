@@ -27,10 +27,16 @@ git clone <repository_url>
 cd <repository_name>
 ```
 
-### 1a. Move files to appropriate locations
+### 1a. Move files to appropriate locations and change there permission accordingly
 ```bash
 cp com.user.zprofile_ssh_sync.plist /Library/LaunchDaemons/com.user.zprofile_ssh_sync.plist
-cp .track_and_copy.sh /path/where/you/want/to/keep
+cd /Library/LaunchDaemons/
+sudo chmod 644 com.user.zprofile_ssh_sync.plist
+cp .track_and_copy.sh /path/where/you/want/to/keep/.track_and_copy.sh 
+cd /path/where/you/have/kept/.track_and_copy.sh
+touch .track_and_copy.log 
+sudo chmod 0644 .track_and_copy.log
+sudo chmod 0755 .track_and_copy.sh;sudo chown <username> .track_and_copy.sh
 ```
 
 ### 2. Setup the LaunchDaemon Plist
@@ -121,6 +127,10 @@ tail -f /path/to/log/file.log
 2.	Full Disk Access: Essential for bash to access and modify files.
 3.	Script Placement: The script can be placed anywhere on the system.
 4.  To show/access hidden/dot files press ⌘+⇧+. (command+shift+.)
+
+<div style="border-left: 4px solid #FFA500; padding: 10px; background-color: #FF0000; color: #FFFFFF;">
+<strong>⚠️ Warning:</strong> Don't not change absolute path to <strong>$HOME, ~, $(WHOAMI) or anything else</strong>.
+</div>
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request
