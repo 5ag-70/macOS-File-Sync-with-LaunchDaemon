@@ -132,7 +132,5 @@ tail -f /path/to/log/file.log
 <strong>⚠️ Warning:</strong> Don't not change absolute path to <strong>$HOME, ~, $(WHOAMI) or anything else</strong>.
 </div>
 
-> ⚠️ **Warning:** Don't not change absolute path to `$HOME, ~, $(WHOAMI) or anything else`.
-
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request
