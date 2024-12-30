@@ -76,6 +76,17 @@ Go to System Preferences → Privacy & Security → Full Disk Access and add:
 ```bash
 sudo launchctl load /Library/LaunchDaemons/com.user.zprofile_ssh_sync.plist
 ```
+if you get an eror like 
+```bash
+sudo launchctl load /Library/LaunchDaemons/com.user.zprofile_ssh_sync.plist
+Load failed: 5: Input/output error
+Try running `launchctl bootstrap` as root for richer errors.
+```
+Just do unload and load again
+```bash
+sudo launchctl unload /Library/LaunchDaemons/com.user.zprofile_ssh_sync.plist
+sudo launchctl load /Library/LaunchDaemons/com.user.zprofile_ssh_sync.plist
+```
 
 ### 5. File Synchronization Script
 The synchronization script (.track_and_copy.sh) handles copying .zprofile and .ssh directories:
