@@ -7,7 +7,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/sagarrana/.track_and_copy.sh</string>
+        <string>/Users/sagarrana/.track_and_copy_back.sh</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
