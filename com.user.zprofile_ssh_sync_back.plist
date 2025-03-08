@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.user.zprofile_ssh_sync</string>
+    <string>com.user.zprofile_ssh_sync_back</string>
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/sagarrana/.track_and_copy_back.sh</string>
+        <string>/Users/sagarrana/Documents/.track_and_copy_back.sh</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
     <key>WatchPaths</key>
     <array>
-        <string>/Users/sagarrana/Documents/Kaseya_System/.zprofile</string>
-        <string>/Users/sagarrana/Documents/Kaseya_System/.ssh</string>
+        <string>/Users/sagarrana/.zprofile</string>
+        <string>/Users/sagarrana/.ssh</string>
     </array>
     <key>WorkingDirectory</key>
     <string>/Users/sagarrana</string>
     <key>StandardOutPath</key>
-    <string>/tmp/com.user.zprofile_ssh_sync.out</string>
+    <string>/tmp/com.user.zprofile_ssh_sync_back.out</string>
     <key>StandardErrorPath</key>
-    <string>/tmp/com.user.zprofile_ssh_sync.err</string>
+    <string>/tmp/com.user.zprofile_ssh_sync_back.err</string>
 </dict>
 </plist>
