@@ -40,6 +40,7 @@ sudo chmod 0755 .track_and_copy.sh;sudo chown <username> .track_and_copy.sh
 ```
 
 ### 2. Setup the LaunchDaemon Plist
+Looking below plist is the example file and please make the changes in actual file accordingly.
 ```bash
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -50,21 +51,24 @@ sudo chmod 0755 .track_and_copy.sh;sudo chown <username> .track_and_copy.sh
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/path/to/.track_and_copy.sh</string>
+        <string>/YOUR/PATH/TO/THE/FILE/.track_and_copy.sh</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
     <key>WatchPaths</key>
     <array>
-        <string>/Users/<username>/.zprofile</string>
-        <string>/Users/<username>/.ssh</string>
+        <string>/FILE/YOU/WANT/TO/WATCH/.zprofile</string>
+        <string>/DIRECTORY/YOU/WANT/TO/WATCH/.ssh</string>
     </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/sagarrana</string>
     <key>StandardOutPath</key>
     <string>/tmp/com.user.zprofile_ssh_sync.out</string>
     <key>StandardErrorPath</key>
     <string>/tmp/com.user.zprofile_ssh_sync.err</string>
 </dict>
 </plist>
+
 ```
 Replace <username> and /path/to/.track_and_copy.sh with actual values.
 
@@ -87,27 +91,32 @@ Just do unload and load again
 sudo launchctl unload /Library/LaunchDaemons/com.user.zprofile_ssh_sync.plist
 sudo launchctl load /Library/LaunchDaemons/com.user.zprofile_ssh_sync.plist
 ```
+Same can be down for the other plist file
 
 ### 5. File Synchronization Script
-The synchronization script (.track_and_copy.sh) handles copying .zprofile and .ssh directories:
+The synchronization script (.track_and_copy.sh) handles copying .zprofile and .ssh directories from source directory(In my case it was Icloud Drive location).
+Please change the path accordingly and replace the chown user with your user.
+
+Looking below script is the example file and please make the changes in actual file accordingly. 
 ```bash
 #!/bin/bash
 
 # Source and destination paths
-ZPROFILE_SOURCE="/Users/<username>/.zprofile"
-ZPROFILE_DEST="/path/to/destination/.zprofile"
+ZPROFILE_SOURCE="Your/Path/Here"
+ZPROFILE_DEST="Your/Path/Here"
 
-SSH_SOURCE="/Users/<username>/.ssh"
-SSH_DEST="/path/to/destination/.ssh"
+SSH_SOURCE="Your/Path/Here"
+SSH_DEST="Your/Path/Here"
 
-LOG_FILE="/path/to/log/file.log"
+LOG_FILE="Your/Path/Here/.track_and_copy.log"
 
 echo "$(date): Script started" >> "$LOG_FILE"
 
 # Copy .zprofile if it has changed
 if [ -f "$ZPROFILE_SOURCE" ]; then
     rsync -u "$ZPROFILE_SOURCE" "$ZPROFILE_DEST" >> "$LOG_FILE" 2>&1
-    echo "$(date): Synced .zprofile" >> "$LOG_FILE"
+    chown <YOUR USERNAME>:staff "$ZPROFILE_DEST"
+    echo "$(date): Synced and changed ownership of .zprofile" >> "$LOG_FILE"
 else
     echo "$(date): .zprofile not found" >> "$LOG_FILE"
 fi
@@ -115,10 +124,12 @@ fi
 # Sync .ssh folder
 if [ -d "$SSH_SOURCE" ]; then
     rsync -a --delete "$SSH_SOURCE/" "$SSH_DEST/" >> "$LOG_FILE" 2>&1
-    echo "$(date): Synced .ssh" >> "$LOG_FILE"
+    chown -R <YOUR USERNAME>:staff "$SSH_DEST"
+    echo "$(date): Synced and changed ownership of .ssh" >> "$LOG_FILE"
 else
     echo "$(date): .ssh directory not found" >> "$LOG_FILE"
 fi
+
 ```
 
 ## Debugging
