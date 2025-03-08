@@ -7,14 +7,14 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/sagarrana/Documents/.track_and_copy.sh</string>
+        <string>/Users/sagarrana/.track_and_copy.sh</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
     <key>WatchPaths</key>
     <array>
-        <string>/Users/sagarrana/.zprofile</string>
-        <string>/Users/sagarrana/.ssh</string>
+        <string>/Users/sagarrana/Documents/Kaseya_System/.zprofile</string>
+        <string>/Users/sagarrana/Documents/Kaseya_System/.ssh</string>
     </array>
     <key>WorkingDirectory</key>
     <string>/Users/sagarrana</string>
