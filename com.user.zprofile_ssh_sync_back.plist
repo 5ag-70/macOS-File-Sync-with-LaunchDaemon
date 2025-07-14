@@ -7,12 +7,14 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/sagarrana/Documents/.track_and_copy_back.sh</string>
+        <string>/Users/sagarrana/.track_and_copy_back.sh</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
     <key>WatchPaths</key>
     <array>
+        <string>/Users/sagarrana/.zsh_history</string>
+        <string>/Users/sagarrana/.vimrc</string>
         <string>/Users/sagarrana/.zprofile</string>
         <string>/Users/sagarrana/.ssh</string>
     </array>
