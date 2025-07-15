@@ -1,13 +1,13 @@
 #!/bin/bash
 
- === Config ===
+# === Config ===
 GROUP="staff"
 LOG_FILE="/Users/sagarrana/.track_and_copy_back.log"
 LOCK_FILE="/tmp/.track_and_copy.lock"
 
 # === Locking ===
 exec 9>"$LOCK_FILE"
-flock 9
+/opt/homebrew/bin/flock 9
 
 # === Start Logging ===
 echo "" >> "$LOG_FILE"
