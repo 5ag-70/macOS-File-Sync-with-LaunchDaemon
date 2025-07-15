@@ -13,7 +13,8 @@ exec 9>"$LOCK_FILE"
 echo "" >> "$LOG_FILE"
 echo " ****** Track and Copy Script Started ****** " >> "$LOG_FILE"
 echo "$(date): [INFO] Acquired lock and starting sync" >> "$LOG_FILE"
-echo "$(date): [INFO] If any changes found, it will push those changes to Home folder" >> "$LOG_FILE"
+echo "$(date): [INFO] If any changes found Local Dir," >> "$LOG_FILE"
+echo -e "\t\t\t\t\t\t\t\t\t it will push those changes to Home Folder" >> "$LOG_FILE"
 
 # === File sync list (SRC, DEST) pairs ===
 FILES_TO_SYNC=(
@@ -39,7 +40,8 @@ while [ $i -lt ${#FILES_TO_SYNC[@]} ]; do
         echo "$(date): [INFO] Syncing $FILE_NAME" >> "$LOG_FILE"
         rsync -u "$SRC" "$DEST" >> "$LOG_FILE" 2>&1
         chown "sagarrana:$GROUP" "$DEST"
-        echo "$(date): [INFO] Synced and updated ownership of $FILE_NAME" >> "$LOG_FILE"
+        echo -e "$(date): [INFO] Synced and updated ownership of $FILE_NAME" >> "$LOG_FILE"
+        echo -e "\t\t\t\t\t\t\t\t\t Done......." >> "$LOG_FILE"
     else
         echo "$(date): [SKIP] No changes detected for $FILE_NAME. Skipping..." >> "$LOG_FILE"
     fi
@@ -56,7 +58,8 @@ if [ -d "$SSH_SOURCE" ]; then
         echo "$(date): [INFO] Syncing .ssh directory" >> "$LOG_FILE"
         rsync -a --delete "$SSH_SOURCE/" "$SSH_DEST/" >> "$LOG_FILE" 2>&1
         chown -R "sagarrana:$GROUP" "$SSH_DEST"
-        echo "$(date): [INFO] Synced and updated ownership of .ssh directory" >> "$LOG_FILE"
+        echo -e "$(date): [INFO] Synced and updated ownership of .ssh directory" >> "$LOG_FILE"
+        echo -e "\t\t\t\t\t\t\t\t\t Done......." >> "$LOG_FILE"
     else
         echo "$(date): [SKIP] No changes detected in .ssh directory. Skipping..." >> "$LOG_FILE"
     fi
